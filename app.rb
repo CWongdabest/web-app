@@ -22,7 +22,5 @@ get '/dinner' do
 end
 
 get '/cat' do
-  "<div>
-  <img src='http://bit.ly/1eze8aE' style='border: 10px dashed red;'>
-  </div>"
+  erb(:index)
 end
