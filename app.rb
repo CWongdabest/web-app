@@ -9,19 +9,13 @@ get '/secret' do
   "bye world!"
 end
 
-get '/open' do
-  "still here world!"
+get '/random-cat' do
+  @name = ["Amigo", "Oscar", "Viking"].sample
+  erb(:index)
 end
 
-get '/closed' do
-  "not here world!"
-end
-
-get '/dinner' do
-  "hungry world!"
-end
-
-get '/cat' do
-  @name = ["Amigo", "Oscar", "Viking"].sample 
+get '/named-cat' do
+  p params
+  @name = params[:name]
   erb(:index)
 end
